@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approved_Position_before_Posting</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(ISPICKVAL(Position__r.Approval_Status__c , &apos;Approved&apos;))</errorConditionFormula>
+    <errorDisplayField>Position__c</errorDisplayField>
+    <errorMessage>Position should be approved by respective manager</errorMessage>
+</ValidationRule>
